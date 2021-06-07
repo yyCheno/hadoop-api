@@ -15,6 +15,8 @@ public class test {
         URI uri = new URI("hdfs://hadoopmaster:58494");
         FS fs = new FS(uri ,conf);
         FileSystem hdfs = fs.getHDFS();
-        System.out.println(hdfs.getFileChecksum(new Path("/in")));
+        String condition =  "";
+        String path="/Users/bytedance/Desktop/test/"+condition.substring(4);
+        hdfs.copyFromLocalFile(new Path(path),new Path("/1.txt"));
     }
 }
