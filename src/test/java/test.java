@@ -12,7 +12,7 @@ public class test {
     public static void main(String[] args) throws URISyntaxException, IOException {
         Configuration conf = new Configuration();
         conf.set("dfs.client.use.datanode.hostname", "true");
-        URI uri = new URI("hdfs://222.200.125.11:58494");
+        URI uri = new URI("hdfs://hadoopmaster:58494");
         FS fs = new FS(uri ,conf);
         FileSystem hdfs = fs.getHDFS();
         System.out.println(hdfs.getFileChecksum(new Path("/in")));
