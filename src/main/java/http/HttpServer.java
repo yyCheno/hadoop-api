@@ -57,9 +57,8 @@ public class HttpServer {
                         conf.set("dfs.client.use.datanode.hostname", "true");
                         FS fs = new FS(new URI("hdfs://hadoopmaster:58494"),conf);
                         FileSystem hdfs = fs.getHDFS();
-                        System.out.println("::"+condition+"::");
-                        String path="/Users/bytedance/Desktop/test/"+condition.substring(4,condition.length()-1);
-                        hdfs.copyFromLocalFile(new Path(path),new Path("/"+condition.substring(4)));
+                        String path="/Users/bytedance/clothes_server/platform_clothes/DownloadFile/"+condition.substring(4,condition.length()-1);
+                        hdfs.copyFromLocalFile(new Path(path),new Path("/"+condition.substring(4,condition.length()-1)));
                     }
                     /**
                      * 获得POST参数
